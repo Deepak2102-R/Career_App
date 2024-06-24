@@ -1,0 +1,7 @@
+{
+  "appId": "careerpath.anupamkris.dev",
+  "appName": "Vazhikaati",
+  "webDir": "dist",
+  "allowMixedContent": true,
+  "server": {}
+}

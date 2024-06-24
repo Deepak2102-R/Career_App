@@ -1,0 +1,38 @@
+{
+  "name": "careerpath",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "android": "yarn build && yarn cap copy && yarn cap sync && yarn cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/app": "^6.0.0",
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/filesystem": "^6.0.0",
+    "@capawesome/capacitor-file-picker": "^6.0.0",
+    "@tato30/vue-pdf": "^1.10.0",
+    "axios": "^1.7.2",
+    "firebase": "^10.12.2",
+    "pdf-viewer-vue": "^0.2.7",
+    "pinia": "^2.1.7",
+    "sass": "^1.71.0",
+    "sass-loader": "^14.1.0",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-vue-components": "^0.26.0",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5",
+    "vue-writer": "^2.0.2",
+    "vuefire": "^3.1.23"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.3",
+    "vite": "^5.0.11"
+  }
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Vazhikaati</string>
+    <string name="title_activity_main">Vazhikaati</string>
+    <string name="package_name">careerpath.anupamkris.dev</string>
+    <string name="custom_url_scheme">careerpath.anupamkris.dev</string>
+</resources>
