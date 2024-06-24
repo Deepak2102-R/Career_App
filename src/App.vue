@@ -28,14 +28,15 @@ watch(user, async (currentUser, previousUser) => {
   // rejected because the user wasn't ready yet, logged in
   // then got back to this page
   if (currentUser && typeof route.query.redirect === "string") {
+
     return router.push(route.query.redirect);
   }
 });
 
 onMounted(() => {
   App.addListener("backButton", () => {
-    if (route.name === "login") {
-      return;
+    if (route.name === "login" || route.name === "register" || route.name === "home") {
+      App.exitApp();
     }
     router.back();
   });

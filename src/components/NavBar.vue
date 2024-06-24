@@ -1,7 +1,11 @@
 <template>
   <nav v-if="!['login', 'register'].includes(route.name)">
+    <div class="logout">
+      <button @click="home">
+        <ion-icon name="home-outline" />
+      </button>
+    </div>
     <p>{{ capitalizedRouteName }}</p>
-
     <div class="logout">
       <button @click="logout">
         <ion-icon name="power-outline" />
@@ -11,12 +15,13 @@
 </template>
 
 <script setup>
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { useFirebaseAuth } from "vuefire";
 import { signOut } from "firebase/auth";
 
 const auth = useFirebaseAuth();
 const route = useRoute();
+const router = useRouter();
 
 const capitalizedRouteName = computed(() => {
   return route.name
@@ -24,8 +29,13 @@ const capitalizedRouteName = computed(() => {
     : "";
 });
 
+
 const logout = () => {
   signOut(auth);
+};
+
+const home = () => {
+  router.push("/");
 };
 </script>
 
@@ -47,6 +57,7 @@ nav {
   .logout {
     height: 40px;
     width: 40px;
+
     button {
       margin: 0;
 
